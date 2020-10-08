@@ -1,0 +1,25 @@
+<!doctype html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript" src="title.js">
+</script>
+<script>
+var title=wtitle+" - 笔稽DE网站 "
+document.title=title
+</script>
+<script>
+var w=1;
+var nw=w+1;
+var uw=w-1;
+</script>
+<script>
+windows.onfocus=function (){
+document.title=title;
+};
+window.onblur=function () {
+document.title = '你看不见我(:３っ　)へ'; 
+};
+</script>
+<a href="javascript:window.location.href='/w/'+nw+'/index.html';">下一篇</a> 
+<a href="javascript:window.location.href='/w
+/'+uw+'/index.html';">上一篇</a>
