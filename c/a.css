@@ -2,5 +2,8 @@ a:link {
 	text-decoration: none;
 }
 a:hover {
-style:color:red;
+style:#00000;
+}
+a:active{
+style:#b22222
 }
