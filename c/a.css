@@ -3,8 +3,8 @@ a:link {
 }
 a:hover{
 	text-decoration:underline;
-css5color:#F00;
+background:#F00;
 }
 a:active{
-css5color:#b22222;
+background:#b22222;
 }
