@@ -1,9 +1,10 @@
 a:link {
 	text-decoration: none;
 }
-a:hover {
-style:#00000;
+a:hover{
+	text-decoration:underline;
+text-style:#00000;
 }
 a:active{
-style:#b22222;
+text-style:#b22222;
 }
