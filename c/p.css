@@ -1,3 +1,4 @@
-p:active{
-background:#f00;
+p:selection{
+background:#ccc;
+color:#b22222;
 }
