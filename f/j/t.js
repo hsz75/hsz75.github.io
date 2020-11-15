@@ -1,3 +1,4 @@
+var t=new date();
 var s=t.gethours();
 if (s>19）;
 document.write('晚上好!');
