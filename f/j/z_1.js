@@ -1,1 +1,0 @@
-navigator.vibrate([500]);
