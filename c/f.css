@@ -1,0 +1,7 @@
+  [@font-face](/user/font-face){
+    font-family:'思源黑体 CN Heavy';
+      src:url('f/f.otf') format('truetype');
+
+     .font1{
+font-family:'思源黑体 CN Heavy';
+font-size:100px;

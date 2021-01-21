@@ -1,0 +1,10 @@
+a:link {
+	text-decoration: none;
+}
+a:hover{
+	text-decoration:underline;
+background:#808080;
+}
+a:active{
+background:#ffffff;
+}
