@@ -1,6 +1,6 @@
 div{
 		width:200px; 
-		height:20em;
+		height:200px;
 		border:1px solid red;
 		transition:all 0.23s;
 border-radius:10px;
@@ -11,3 +11,7 @@ border-radius:10px;
 			border-radius:10px;
 -moz-border-radius:10px; 
 			}
+ img{
+	 width:100px;
+	 height:100px;
+}
