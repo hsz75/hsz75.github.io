@@ -1,6 +1,6 @@
 .w{
-		width:200px; 
-		height:200px;
+		width:300px; 
+		height:300px;
 		border:1px solid red;
 		transition:all 0.23s;
 border-radius:10px;
@@ -12,6 +12,6 @@ border-radius:10px;
 -moz-border-radius:10px; 
 			}
  .w_img{
-	 width:100px;
-	 height:100px;
+	 width:50em;
+	 height:50em;
 }
