@@ -1,6 +1,6 @@
 	.m{
-		width:20em; 
-		height:200px;
+		width:auto; 
+		height:auto;
 		border:1px solid red;
 		transition:all 0.23s;
 border-radius:10px;
