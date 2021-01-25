@@ -1,1 +1,1 @@
-var turetime=date+'ÔÂ'+day+'ÈÕ'
+var turetime=date+'æœˆ'+day+'æ—¥'
