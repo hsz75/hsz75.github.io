@@ -1,4 +1,4 @@
-.w{
+div{
 text-ailgn:center;
 margin:0 auto;
 position:absolute;
@@ -14,7 +14,7 @@ border-radius:10px;
 			border-radius:10px;
 -moz-border-radius:10px; 
 			}
- .w.img{
+div.img{
 position:relative;
 	 width:50em;
 	 height:50em;
