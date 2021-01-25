@@ -1,1 +1,1 @@
-var ture=date+'月'+day+'日'
+var turetime=date+'月'+day+'日'
