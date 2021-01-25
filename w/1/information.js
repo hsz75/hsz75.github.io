@@ -1,3 +1,4 @@
 var wtitle='hello,world';
-var date=1;
-var day=27;
+var year=2020
+var date=10;
+var day=8;
