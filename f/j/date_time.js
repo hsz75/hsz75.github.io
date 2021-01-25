@@ -1,1 +1,1 @@
-var ture=date+'月'+ti+'时'+me+'秒';
+var ture=date+'月'+day+'日'
