@@ -1,7 +1,6 @@
 div{
 text-ailgn:center;
 margin:0 auto;
-position:absolute;
 		width:300px; 
 		height:300px;
 		border:1px solid red;
@@ -15,7 +14,6 @@ border-radius:10px;
 -moz-border-radius:10px; 
 			}
 div.img{
-position:relative;
 	 width:50em;
 	 height:50em;
 }
