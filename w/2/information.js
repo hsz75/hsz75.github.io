@@ -1,3 +1,3 @@
-var wtitle='2020°¡';
+var wtitle='2020å•Š';
 var date=1;
 var day=28;
