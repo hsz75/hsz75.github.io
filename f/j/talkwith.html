@@ -1,0 +1,26 @@
+<!doctype html>
+<head>
+<meta charset="UTF-8">
+<html lang="zh-cn">
+<link rel="icon" href="/favicon.ico">
+<title>笔稽の评论区</title>
+</head>
+<body>
+<link rel="stylesheet" href="//cdn.bootcss.com/gitalk/1.5.0/gitalk.min.css">
+<script src="//cdn.bootcss.com/gitalk/1.5.0/gitalk.min.js"></script>
+<div id="gitalk-container"></div>
+<script>
+var gitalk = new Gitalk({
+  clientID: '', // GitHub Application Client ID
+  clientSecret: '', // GitHub Application Client Secret
+  repo: 'hsz75.github.io'      
+  owner: 'hsz75',          
+  admin: [''],       
+  id: location.pathname,      
+})
+
+gitalk.render('gitalk-container');   
+}
+</script>
+</body>
+</html>
