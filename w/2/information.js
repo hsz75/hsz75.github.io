@@ -1,3 +1,4 @@
+var w=2;
 var wtitle='2020啊';
 var year=2021
 var date=1;
