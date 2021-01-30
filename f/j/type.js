@@ -1,6 +1,6 @@
 if (ty=0){
-document.write('зЊди');
+document.write('转载');
 }
 if (ty=1){
-document.write('зджЦ');
+document.write('自制');
 }
