@@ -1,6 +1,6 @@
 if (ty=0){
-document.write('×ªÔØ');
+document.write('Ð·ÐŠÐ´Ð¸');
 }
 if (ty=1){
-document.write('×ÔÖÆ');
+document.write('Ð·Ð´Ð¶Ð¦');
 }

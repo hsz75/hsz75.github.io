@@ -1,3 +1,3 @@
 if (la='la'){
-document.write('×îºóĞŞ¸ÄÊ±¼ä:'+'turetime');
+document.write('æœ€åä¿®æ”¹æ—¶é—´:'+'turetime');
 }
