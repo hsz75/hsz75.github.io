@@ -1,4 +1,4 @@
-if (location.hostname=website){
+if (location.href=website){
 }else{
 window.location.href=website;
 }
