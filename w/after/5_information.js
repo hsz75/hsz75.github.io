@@ -7,7 +7,6 @@ var inw='精 彩 断 线<br>多 重 鼠 标<br>另 外 插 播<br>精 彩 失 �
 var ty=1; 
 var by='笔稽菌<br>可能会发到B站（视频版）';
 var la='la';
-document.write('今天是高产...吧');
 document.getElementById("1").src="/f/1.jpg";
 document.getElementById("2").src ="/f/2.jpg";
 document.getElementById("3").src ="/f/3.jpg";
