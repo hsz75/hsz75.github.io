@@ -1,8 +1,6 @@
-## hsz75.github.io ##
-##这里是笔稽DE网站!##
+﻿## hsz75.github.io ##
+#这里是笔稽DE网站!#
 <br>
-<a href="https://hsz75.github.io" target="_blank">笔稽DE网站</a>
+[笔稽DE网站](https://hsz75.github.io 笔稽DE网站)
 <br>
-<p>Powered&nbsp;by&nbsp;
-  <a href="https://hsz75.github.io" target="_blank">
-    hsz75</a>
+*Powered&nbsp;by&nbsp;[hsz75](https://hsz75.github.io hsz75)
