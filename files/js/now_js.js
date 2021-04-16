@@ -1,3 +1,2 @@
-var nowpath=location.pathname;
-document.getElementById("nowpath").innerHTML=''
+document.getElementById("now_js").innerHTML=''
 
