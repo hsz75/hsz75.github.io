@@ -1,3 +1,7 @@
+a{
+color:rgb(220,20,60);
+}
+
 a:link {
 	text-decoration: none;
 }
@@ -7,7 +11,4 @@ background:#ffffff;
 }
 a:active{
 background:#ffffff;
-}
-a{
-color:rgb(220,20,60);
 }
