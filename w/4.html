@@ -1,15 +1,17 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="zh-cn">
 <head>
 <meta charset="UTF-8">
 <link rel="shorticon" href="/favicon.ico">
-<script type="text/javascript" src="4_infor.js">
+<script type="text/javascript" src="3_infor.js">
 </script>
 <script src="/files/js/log.js">
 </script>
-<!--[if IE]><center><h1>请使用IE9以上的浏览器，否则本网站的部分功能无法正常使用!</h1></files/cssenter><![endif]-->
+<!--[if IE]><center><h1>请使用IE9以上的浏览器，否则本网站的部分功能无法正常使用!</h1></center><![endif]-->
 </head>
 <script src="/files/js/log.js">
+</script>
+<script type="text/javascript" src="/files/js/ifq.js">
 </script>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <style>
@@ -21,6 +23,7 @@ var title=wtitle+" - 笔稽DE网站 ";
 document.title=title;
 </script>
 <link rel="stylesheet" type="text/css" href="/files/css/hr.css" />
+<link rel="stylesheet" type="text/css" href="/files/css/other.css" />
 <style>
 .title{
 line-height:150px;
@@ -35,6 +38,7 @@ text-align:center;
 <style>
 @import url('/files/css/p.css')
 </style>
+</script>
 <script src="/files/js/w.js">
 </script>
 <div class="navbar-header" style="margin-right: 5%; margin-left: 5%;">
@@ -45,7 +49,7 @@ text-align:center;
 <p style="margin-left:5%" id="now_js">
 加载时错误，请稍后或启用Javascript!<script src="/files/js/now_js.js"></script>
 </p>
-<h1 class="title"><script src="4_infor.js">
+<h1 class="title"><script src="3_infor.js">
 </script>
 <script>
 document.write(wtitle);
@@ -65,11 +69,11 @@ document.write(turetime);
 document.write(by);
 </script>
 </h5>
-<script type="text/javascript" src="4_infor.js">
+<script type="text/javascript" src="3_infor.js">
 </script>
-<ul>
-<p id="inw" style="margin-left:5%"><script src="4_infor.js"></script><script>document.write(inw);</script></p>
-</ul>
+<div class="w-start">
+<p id="inw" style="margin-left:5%"><script src="3_infor.js"></script><script>document.write(inw);</script></p>
+</div>
 <br>
 <br>
 <hr>
@@ -92,22 +96,17 @@ background
 }
 </style>
 <center>
-<style>
-@import url('/files/css/talkw.css');
-</style>
-<div class="talkwith">
-<ul>
-<script type="text/javascript" src="4_infor.js">
+<script type="text/javascript" src="3_infor.js">
 </script>
-<small><strong>
-如果要评论，建议将以下文字复制到评论区再评论<br>因为评论区只有一个（因为我懒）</h3>
-</ul>
+<h3><strong style="text-align:center">
+如果要评论，建议将以下文字复制到评论区再评论<br>因为评论区只有一个（因为我懒）
+</h3></strong>
 <h5>
 <script>document.write(">**在&nbsp;&nbsp;",wtitle,"&nbsp;&nbsp;下的一条评论**","<br>_______")</script>
 </h5>
-</div>
 <br>
-<br>
+<iframe src="/files/htmlpage/talkwith.html" height="30%" width="90%">
+</iframe>
 <style>
 .under{
 position:fixed;
@@ -126,13 +125,6 @@ background-color:grey;
 </head>
 <body>
 <center>
-<h2>评论区</h2>
-<small><strong>
-特别鸣谢:<a href="//github.com/dnyyfb" target="_blank">@电脑音乐发布</a>
-</small></strong>
-</body>
-</html>
-
 <div class="box">
 <h1>
 文章
@@ -140,7 +132,6 @@ background-color:grey;
 <a href="javascript:window.location.href=uw;" title="上一篇">上一篇</a>
 <br>
 <a href="javascript:window.location.href=nw;" title="下一篇">下一篇</a>
-</div> 
-</files/cssenter>
+</div>
 </body>
 </html>
