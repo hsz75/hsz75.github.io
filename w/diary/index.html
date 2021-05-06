@@ -9,14 +9,42 @@
 </head>
 <body>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<iframe src="above.html" width="100%">
 <iframe src="header.html" width="100%">
-</iframe>
-<iframe src="main.html" width="100%">
 </iframe>
 <iframe src="/files/htmlpage/footer.html" width="100%">
 </iframe>
-<iframe src="under.html" width="100%">
-</iframe>
+<link rel="stylesheet" href="/files/talkwith/gitalk.css">
+<link rel="stylesheet" href="/files//css/p.css">
+<link rel="stylesheet" href="/files/c/a.css">
+<script src="/files/talkwith/gitalk.min.js"></script>
+</head>
+<body>
+<h1>日记</h1>
+<h3>你好，这里是笔稽的日记页面，平时有小事都会写在这里噢</h3>
+<small>
+特别鸣谢:<a href="https://github.com/dnyyfb" target="_blank">@电脑音乐发布</a>
+</small>
+<center>
+<div id="gitalk-container">
+<script>var gitalk = new Gitalk({
+    clientID: 'bd05bd85bb78c0ddee1f',
+    clientSecret: '1d9901e626aff165de240a12d963e09ac4c8f896',
+    repo: 'diary',
+    owner: 'hsz75',
+    admin: ['hsz75'],
+    id: location.pathname,      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false,  // Facebook-like distraction free mode
+    createIssueManually: false,
+    enableHotKey: true,
+    number: 1,
+    labels: ['bug'],
+    title: 'diary',
+    body: 'diary'
+  })
+  
+  gitalk.render('gitalk-container')
+</script>
+</div>
+</center>
 </body>
 </html>
