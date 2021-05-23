@@ -2,5 +2,5 @@ window.onfocus=function (){
 document.title=title;
 };
 window.onblur=function () {
-document.title = 'ä½ çœ‹ä¸è§æˆ‘(:ï¼“ã£ã€€)ã¸'+title; 
+document.title = 'Äã¿´²»¼ûÎÒ(:£³¤Ã¡¡)¤Ø'+" _ "title; 
 };
