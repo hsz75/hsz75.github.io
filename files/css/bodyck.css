@@ -1,3 +1,9 @@
 body{
-background-color:#f1f1f1;
+width:auto;
+height:auto;
+background: url('https://sm.ms/image/Xr8ILWzq6cnjC3Z') no-repeat;
+-moz-background-size: cover; 
+-ms-background-size: cover;
+-webkit-background-size: cover;
+background-size:cover;
 }
