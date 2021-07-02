@@ -1,7 +1,11 @@
 body{
+color:rgb("150,150,150");
+}
+
+.1{
 width:auto;
 height:auto;
-background: url('https://sm.ms/image/Xr8ILWzq6cnjC3Z') no-repeat;
+background: url('') no-repeat;
 -moz-background-size: cover; 
 -ms-background-size: cover;
 -webkit-background-size: cover;
