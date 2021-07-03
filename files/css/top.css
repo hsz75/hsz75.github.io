@@ -4,10 +4,12 @@
 padding:0;
 overflow:hidden;
 position: fixed;
-top: 0; //top
+top: 0;
 width: 100%;
+z-index:999
 }
 li
 {
+z-index:999;
 	float:left;//设置选项向左对齐
 }
