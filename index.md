@@ -8,7 +8,8 @@
 [文章](https://biji233.icoc.bz/)
 <br>
 你可以通过这些方式联系我！
-<style >
+<br>
+<link rel="stylesheet" type="text/css" href="/files/css/a.css" />
 <div class="m">
 <a href="https://space.bilibili.com/202673925" target="_blank" alt="笔稽菌DEBilibili" title="Bilibili"><img src="https://bilibili.com/favicon.ico" height="32" width="32"></a>
 <a href="https://github.com/hsz75" target="_blank" alt="Github" title="Github"><img src="https://github.com/favicon.ico" height="32" width="32"></a>
