@@ -1,37 +1,16 @@
-## Welcome to GitHub Pages
-
-You can use the [editor on GitHub](https://github.com/hsz75/hsz75.github.io/edit/main/index.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/hsz75/hsz75.github.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+<title>笔稽DE网站</title>
+<link rel="shroticon" href="/favicon.ico">
+<center>**笔稽の网站!**</center>
+<br>
+## 欢迎!
+<br>
+作品
+[文章](https://biji233.icoc.bz/)
+<br>
+你可以通过这些方式联系我！
+<div class="m">
+<a href="https://space.bilibili.com/202673925" target="_blank" alt="笔稽菌DEBilibili" title="Bilibili"><img src="https://bilibili.com/favicon.ico" height="32" width="32"></a>
+<a href="https://github.com/hsz75" target="_blank" alt="Github" title="Github"><img src="https://github.com/favicon.ico" height="32" width="32"></a>
+<a target="_blank" href="https://jq.qq.com/?_wv=1027&k=3UC9IdVi"><img src="/files/image/qqlogo.png" height="32" width="32" alt="QQ群" title="笔稽DE小屋(QQ群)"></a>
+<p style="font-size:2.33">快来!(｀･ω･)</p>
+</div>
