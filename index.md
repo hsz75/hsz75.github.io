@@ -1,8 +1,11 @@
 <title>笔稽DE网站</title>
 <link rel="shroticon" href="/favicon.ico">
-<center>**笔稽の网站!**</center>
+
+**笔稽の网站!**
+
 <br>
-## 欢迎!
+
+>## 欢迎!
 <br>
 作品
 [文章](https://biji233.icoc.bz/)
@@ -10,6 +13,8 @@
 你可以通过这些方式联系我！
 <br>
 <link rel="stylesheet" type="text/css" href="/files/css/a.css" />
+<link rel="stylesheet" type="text/css" href="/files/css/m.css" />
+
 <div class="m">
 <a href="https://space.bilibili.com/202673925" target="_blank" alt="笔稽菌DEBilibili" title="Bilibili"><img src="https://bilibili.com/favicon.ico" height="32" width="32"></a>
 <a href="https://github.com/hsz75" target="_blank" alt="Github" title="Github"><img src="https://github.com/favicon.ico" height="32" width="32"></a>
