@@ -1,0 +1,14 @@
+a{
+color:rgb(220,20,60);
+}
+
+a:link {
+	text-decoration: none;
+}
+a:hover{
+	text-decoration:underline;
+background:#ffffff;
+}
+a:active{
+background:#ffffff;
+}

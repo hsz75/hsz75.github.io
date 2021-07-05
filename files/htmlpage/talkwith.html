@@ -1,0 +1,49 @@
+﻿<!doctype html>
+<head>
+<meta charset="UTF-8">
+<html lang="zh-cn">
+<link rel="icon" href="/favicon.ico">
+<title>笔稽の评论区</title>
+<link rel="stylesheet" href="/files/talkwith/gitalk.css">
+<link rel="stylesheet" href="/files/css/p.css">
+<link rel="stylesheet" href="/files/c/a.css">
+</head>
+<body>
+<center>
+<h2>评论区</h2>
+<h3>
+特别鸣谢:<a href="https://github.com/dnyyfb" target="_blank">@电脑音乐发布</a>
+</h3>
+<h5>
+如果你没登录Github,请点击<a href="/files/htmlpage/talkwith.html" target="_blank">此处</a>进行登录
+<br>
+不要尝试点击下面Gitalk的登录按钮，否则你的浏览器可能会拦截<br>原因一般都是关于安全的
+<br>
+手机端被拦截请按返回键
+<br>
+如果点过就不要点了^w^<br>在登录页面点击下面的展开符号，再点击使用Github登录<br>登录完成请关闭此页面<br>手机端一般按返回键就可以了
+</h5>
+<script src="/files/talkwith/gitalk.min.js"></script>
+<div id="gitalk-container">
+<script>var gitalk = new Gitalk({
+    clientID: 'bd05bd85bb78c0ddee1f',
+    clientSecret: '1d9901e626aff165de240a12d963e09ac4c8f896',
+    repo: 'hsz75.github.io',
+    owner: 'hsz75',
+    admin: ['hsz75'],
+    id: location.pathname,      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false,  // Facebook-like distraction free mode
+    createIssueManually: false,
+    enableHotKey: true,
+    number: 1,
+    labels: ['bug'],
+    title: 'hsz75.github.io',
+    body: 'talkwith'
+  })
+  
+  gitalk.render('gitalk-container')
+</script>
+</div>
+</center>
+</body>
+</html>
