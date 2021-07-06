@@ -1,0 +1,58 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>小事记 - 笔稽の网站</title>
+<link rel="shorticon" href="/favicon.ico" />
+<script src="/files/js/log.js">
+</script>
+</head>
+<body style="background-repeat:no-repeat; background-attachment:fixed;background-size:cover;background-image: url(https://www.dmoe.cc/random.php?233335556958);" id="start">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="stylesheet" href="/files/css/p.css">
+<link rel="stylesheet" href="/files/css/a.css">
+<link rel="stylesheet" href="/files/css/iframe.css">
+<link rel="stylesheet" href="/files/css/other.css">
+<link rel="stylesheet" href="/files/css/top.css">
+<ul>
+<li>
+<a href="/">笔稽DE网站</a>
+<a href="/about.html" style="color:grey">关于</a>
+<a href="javascript:alert('不信我<br>=^▽^=')" style="color:grey">链接(未完成)</a>
+</li>
+</ul>
+</head>
+<h1>小事记</h1>
+<center>
+<h3>一些小事情</h3>
+<small>本页感谢名单:<a href="https://github.com/dnyyfb" target="_blank">电脑音乐发布（帮助修正Gitalk部分BUG）
+</center></a>
+</small>
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<center>
+<div id="gitalk-container">
+<script>
+var gitalk = new Gitalk({
+    clientID: 'bd05bd85bb78c0ddee1f',
+    clientSecret: '1d9901e626aff165de240a12d963e09ac4c8f896',
+    repo: 'hsz75.github.io',
+    owner: 'hsz75',
+    admin: ['hsz75'],
+    id: location.pathname,      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false,  // Facebook-like distraction free mode
+    createIssueManually: false,
+    enableHotKey: true,
+    number: 5,
+    labels: ['notes'],
+    title: 'notes',
+    body: 'notes'
+  })
+  
+  gitalk.render('gitalk-container')
+</script>
+</div>
+<a href="/"><span style="font-size:1.5em" background="color:white">返回</span></a>
+</center>
+</body>
+</html>
