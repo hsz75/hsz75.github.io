@@ -1,7 +1,7 @@
 <title>笔稽DE网站</title>
 <link rel="shroticon" href="/favicon.ico">
 
-**##笔稽の网站!**
+**## 笔稽の网站!**
 
 <br>
 
@@ -23,9 +23,3 @@
 <a target="_blank" href="https://jq.qq.com/?_wv=1027&k=3UC9IdVi"><img src="/files/image/qqlogo.png" height="32" width="32" alt="QQ群" title="笔稽DE小屋(QQ群)"></a>
 <p style="font-size:2.33">快来!(｀･ω･)</p>
 </div>
-<style>
-footer{
-}
-.site-footer-credits{
-}
-</style>
