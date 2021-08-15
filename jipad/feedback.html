@@ -1,0 +1,56 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>反馈 - 稽本</title>
+<link rel="shorticon" href="/favicon.ico" />
+<script src="/files/js/log.js">
+</script>
+</head>
+<body bgcolor="#E6E6FB">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<style>
+a{
+color:red;
+text-decoration: none;
+}
+a:hover{
+text-decoration:underline;
+background:#000000;
+}
+a:active{
+background:#ffffff;
+}
+</style>
+<ul style="font-size:3;font-family:思源黑体 CN">
+<li><h1>稽本</h1><a href="#new">最新版！</a>&nbsp;<a href="https://github.com/hsz75/jipad" target="_blank">稽本的Github仓库</a>&nbsp;<a href="https://github.com/hsz75/jipad_newest">稽本最新版仓库</a><br><a href="feedback.html">反馈</a></li>
+<p style="text-align:right">By:笔稽菌&nbsp;特别感谢:<a href="https://space.bilibili.com/285942546" target="_blank">电脑菌</a></li>
+<hr>
+<center>
+<div id="gitalk-container">
+<script>
+var gitalk = new Gitalk({
+    clientID: 'bd05bd85bb78c0ddee1f',
+    clientSecret: '1d9901e626aff165de240a12d963e09ac4c8f896',
+    repo: 'jipad',
+    owner: 'hsz75',
+    admin: ['hsz75'],
+    id: location.pathname,      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false,  // Facebook-like distraction free mode
+    createIssueManually: false,
+    enableHotKey: true,
+    number: 1,
+    labels: ['bug'],
+    title: 'jipad-feedback',
+    body: 'jipad-feedback'
+  })
+  
+  gitalk.render('gitalk-container')
+</script>
+</div>
+<a href="index.html"><span style="font-size:1.5em" background="color:white">返回</span></a>
+</center>
+</body>
+</html>
