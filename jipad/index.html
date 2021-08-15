@@ -6,6 +6,7 @@
 <title>稽本_笔稽的网站</title>
 </head>
 <body bgcolor="#E6E6FB">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <style>
 a{
 color:red;
@@ -20,7 +21,7 @@ background:#ffffff;
 }
 </style>
 <ul style="font-size:3;font-family:思源黑体 CN">
-<li><h1>稽本</h1><a href="#new">最新版！</a>&nbsp;<a href="https://github.com/hsz75/jipad" target="_blank">稽本的Github仓库</a>&nbsp;<a href="https://github.com/hsz75/jipad_newest">稽本最新版仓库</a><a href="https://github.com/hsz75/jipad_newest/archive/refs/heads/main.zip">稽本最新版下载！</a><br><a href="feedback.html">反馈</a></li>
+<li><h1>稽本</h1><a href="#new">最新版！</a>&nbsp;<a href="https://github.com/hsz75/jipad" target="_blank">稽本的Github仓库</a>&nbsp;<a href="https://github.com/hsz75/jipad_newest">稽本最新版仓库</a>&nbsp;<a href="https://github.com/hsz75/jipad_newest/archive/refs/heads/main.zip">稽本最新版下载！</a><br><a href="#feedback">反馈</a></li>
 <p style="text-align:right">By:笔稽菌&nbsp;特别感谢:<a href="https://space.bilibili.com/285942546" target="_blank">电脑菌</a></li>
 <hr>
 <li>2021.7.14:发布v1.0版本：（有BUG，比如窗口打开一次比一次小，这是因为稽本只保存了取用户长宽的大小）</li>
@@ -83,15 +84,49 @@ background:#ffffff;
 一些<b>小细节</b>也有些改变<br>
 <del>这可能是稽本的最后一个版本了</del>
 <br>
-<li>2021.8.7:jipad仓库更新<b>
-整理稽本文件
+<li>2021.8.7:jipad仓库更新
+<b>整理稽本文件</b>
+</ul>
 <br>
 <p id="new">未完待续......</p>
 <br>
 <hr>
 <a href="#">返回上层</a>
-<center>
-<a href="/">(C)opyright&nbsp;2021&nbsp;hsz75&nbsp;All&nbsp;Right&nbsp;Resevered</a>
+<br>
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<ul>
+<h1 id="feedback">反馈</h1>
 </ul>
+<center>
+<div id="gitalk-container">
+<script>
+var gitalk = new Gitalk({
+    clientID: 'bd05bd85bb78c0ddee1f',
+    clientSecret: '1d9901e626aff165de240a12d963e09ac4c8f896',
+    repo: 'jipad',
+    owner: 'hsz75',
+    admin: ['hsz75'],
+    id: location.pathname,      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false,  // Facebook-like distraction free mode
+    createIssueManually: false,
+    enableHotKey: true,
+    number: 1,
+    labels: ['bug'],
+    title: 'jipad-feedback',
+    body: 'jipad-feedback'
+  })
+  
+  gitalk.render('gitalk-container')
+</script>
+</div>
+<br>
+<hr>
+<a href="#">返回上层</a>
+<br>
+<a href="/">(C)opyright&nbsp;2021&nbsp;hsz75&nbsp;All&nbsp;Right&nbsp;Resevered</a>
+</center>
+<script src="/files/js/log.js">
+</script>
 </body>
 </html>
