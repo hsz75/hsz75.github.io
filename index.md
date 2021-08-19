@@ -1,9 +1,10 @@
-<title>笔稽DE网站</title>
+```
+title=笔稽DE网站
+```
+
 <link rel="shroticon" href="/favicon.ico">
 
 <script>document.title=“笔稽DE网站”</script>
-
-<nojavascript><h1>请开启JavaScript!否则本网站的某些功能可能出现异常!</h1></nojavascript>
 
 <title>笔稽DE网站</title>
 
