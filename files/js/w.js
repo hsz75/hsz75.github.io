@@ -1,4 +1,5 @@
-﻿var w_list=new Array[5]
+﻿var w_newest=4
+var w_list=new Array[5];
 w_list[0]="Hello,world"
 w_list[1]="2020啊(总结)"
 w_list[2]="这只是一个提醒"
