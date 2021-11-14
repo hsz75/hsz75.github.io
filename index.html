@@ -1,67 +1,116 @@
-﻿<!doctype html>
+<!doctype html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>笔稽DE网站</title>
-<link rel="shorticon" href="/favicon.ico">
+<!-- 待加工 By:hsz75 -->
+<title>笔稽DE网站 - 远航</title>
+<link rel="short icon" href="favicon.ico">
 </head>
-<body bgcolor="#F2F2F2" style="font-family:思源黑体 CN">
-<script src="/files/js/w.js">
-</script>
-<script type="text/javascript">
-window.document.oncontextmenu = function(){ 
-alert('不要对人家有想法噢!');
-return false;
+<body bgcolor="#F3F3F3" font-family="思源黑体 CN">
+<link rel="stylesheet" href="files/css/import.css">
+<style type="text/css">
+a{
+text-decoration:none;
 }
-</script>
-<style>
-h1{
-font-size:5em;
+a:hover{
+text-decoration:underline;
+background-color:#FFFFFF;
 }
-h1:hover{
-background-color:white;
+
+.top{
+top:0; /*置顶*/
+height:30px; 
+width:100%; /*设置宽度*/
+position:fixed; /*固定页面*/
+list-style-type:none; /*取消li标签的标记*/
+background-color:#E3530B; /*背景颜色*/
+padding:0;/*自身边框到自身内部另一个容器边框之间的距离*/
+margin:0;/*从自身边框到另一个容器边框之间的距离*/
+}
+.top_li1{
+background-color:green;
+}
+.top li a{
+display:block;
+color:gray;
+text-align:center;
+text-decoration:none;
+}
+.top li a:hover{
+text-decoration:underline;
+background-color:gary;
+}
+.top li {
+float:left;
+padding:5px;
+border-right: 1px solid #F3F3F3;
+}
+
+p {
+  font-family: "Times New Roman", "思源黑体 CN" Times, serif;
+}
+
+.page_top{
+height:100%;
+width:100%;
+background-color:#0066CC;
+}
+.page_top h1{
+margin:15px,15px;
+color:white;
+text-align:center;
+}
+.w{
+list-style-type:none; 
+}
+.w p{
+color:#F3F3F3;
+}
+.w h2{
+text-align:center;
+}
+.w a{
+display:block;
+height:50px;
+text-align:center;
+}
+.w_new{
 color:red;
 }
+.w p:hover{
+color:black;
+}
 </style>
-<link rel="stylesheet" href="/files/css/top.css">
-<link rel="stylesheet" type="text/css" href="/files/css/a.css" />
-<link rel="stylesheet" type="text/css" href="/files/css/m.css" />
-<ul>
-<li><a href="/">△&nbsp;</a></li>
-<li><a href="/links.html">链接&nbsp;</a></li>
-<li><a href="/about.html">关于我&nbsp;</a></li>
-<li><a href="https://github.com/hsz75/hsz75.github.io/new/main/w/7/">有灵感？投稿（帮我写文章）吧！&nbsp;</a></li>
+<ul class="top">
+<li class="top_li1"><a href="/">笔稽DE网站</a></li>
+<li><a href="w/notes">小事记</a></li>
+<li><a href="about.html">关于</a></li>
 </ul>
-<h1 style="text-align:center">笔稽の小窝</h1>
-<br>
-<div class="m">
-<a href="https://space.bilibili.com/202673925" target="_blank" alt="笔稽菌DEBilibili" title="Bilibili"><img src="https://bilibili.com/favicon.ico" height="32" width="32"></a>
-<a href="https://github.com/hsz75" target="_blank" alt="Github" title="Github"><img src="https://github.com/favicon.ico" height="32" width="32"></a>
-<a target="_blank" href="https://jq.qq.com/?_wv=1027&k=3UC9IdVi"><img src="/files/image/qqlogo.png" height="32" width="32" alt="QQ群" title="笔稽DE小屋(QQ群)"></a>
-<p style="font-size:2.33">快来!(｀･ω･)</p>
+<div class="page_top">
+<h1>笔稽DE网站</h1>
 </div>
-<style>
-.box{
-margin:0 auto;
-height:90%;
-width:30%;
-border:5px solid white;
-border-radius:10px;
-}
-.box:hover{
-transition:all 0.3s;
-box-shadow:2px 2px 25px 2px rgba(1,1,1,1.5);
-}
-</style>
+<ul class="w">
+<h2>文章</h2>
+<a href="/w/1.html">hello,world</a>
 <br>
-<div class="box">
-<script>
-document.write(w_list[4]);
-document.write(w_list[3]);
-document.write(w_list[2]);
-document.write(w_list[1]);
-document.write(w_list[0]);
-</script>
+<a href="/w/2.html">2020啊</a>
+<br>
+<a href="/w/3.html">一些重要的通知</a>
+<br>
+<a href="/w/4.html">电脑音乐发布直播精彩回放（</a>
+<br>
+<a href="/w/5.html" class="w_new">祝大家2021年新年快乐！ </a>
+<br>
+<p style="text-align:center">(°∀°)ﾉ</p>
+</ul>
+<div style="text-align:center;">
+<h3>或许这网站看起来不怎地，但我会继续加油的</h3>
+<a href="https://space.bilibili.com/202673925" target="_blank" alt="笔稽菌DEBilibili" title="Bilibili"><img src="https://bilibili.com/favicon.ico" width="32" height="32"></a>
+<a href="https://github.com/hsz75" target="_blank" alt="Github" title="Github"><img src="https://github.com/favicon.ico" width="32" height="32"></a>
+<a target="_blank" href="https://jq.qq.com/?_wv=1027&amp;k=3UC9IdVi"><img src="/files/image/qqlogo.png" alt="QQ群" title="笔稽DE小屋(QQ群)" width="32" height="32"></a>
+<br>
+<a href="https://icp.gov.moe/?keyword=20212370" target="_blank">萌ICP备20212370号</a>
+<p>&copy;笔稽DE网站&nbsp;2018-2021</p>
 </div>
 </body>
 </html>
