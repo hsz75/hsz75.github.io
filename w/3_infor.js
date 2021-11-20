@@ -1,5 +1,5 @@
-var w=3;
-var wtitle='这只是一个提醒';
+﻿var w=3;
+var title='这只是一个提醒';
 var year=2021
 var date=2;
 var day=1;
