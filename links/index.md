@@ -36,10 +36,10 @@
 ```
 # 完
 &copy;2022&nbsp;笔稽DE网站
-<script id="span"></script>
+
 
 <iframe src="/files/htmlpage/talkwith.html"></iframe>
 <script src="/files/js/footer.js"></script>
 <script src="/files/js/log.js"></script>
 <script src="/files/js/tip.js"></script>
-
+<script id="span"></script>
