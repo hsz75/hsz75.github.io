@@ -15,7 +15,7 @@ function Runtime(){
         //信息写入到DIV中
         span.innerHTML = "本站已经运行了"+A+"天"+B+"小时"+C+"分"+D+"秒"
     }
-setInterval(runtime, 1000);
+setInterval(Runtime, 1000);
 
 
 
