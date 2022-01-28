@@ -1,37 +1,53 @@
-<script>title="链接 - 笔稽DE网站"</script>
+﻿<title>链接 - 笔稽DE网站</title>
+﻿<style type="text/css">
+﻿.box{
+﻿	margin:auto;
+﻿	text-align:center;
+﻿	height:350px;
+    width:300px;
+    border:1px solid black;
+    border-radius:0px;
+﻿}
+﻿.box:hover{
+    box-shadow:2px 2px 23px 2px rgba(1,1,1,1.5);
+	border-radius:10px;
+	-moz-border-radius:10px; 
+﻿}
+﻿</style>
+﻿<script>title="链接 - 笔稽DE网站";</script>
 # 网站目录
-
 - [主页](/)
 - [稽本](/jipad)
-- [友链](/lins)
+- [友链](/links)
 - <a href="javascript:alert('下次一定啦')">关于</a>
-
-## 基岩般的友谊
-|图标 |网站名|链接
-
-| :----- | :--: | ------: |
-| ------ | ---- | ------- |
-|        |      |         |
-|![电脑菌](https://dnyyfb.xyz:6336/wp-content/uploads/2021/11/cropped-%E7%94%B5%E8%84%91%E8%8F%8C-32x32.png)|电脑菌工作室|<a href="https://dnyyfb.xyz:6336" target="_blank">https://dnyyfb.xyz:6336</a>
+# 基岩般的友谊
+<div class="box">
+|![电脑菌](https://dnyyfb.xyz:6336/wp-content/uploads/2021/11/cropped-%E7%94%B5%E8%84%91%E8%8F%8C-32x32.png)|<br>电脑菌工作室|<br>
+<a href="https://dnyyfb.xyz:6336" target="_blank">https://dnyyfb.xyz:6336</a>
+</div>
 <br>
-
-### 交换友链请满足以下要求：
+# 交换友链请满足以下要求：
+```
 1. 网站不存在违反法律的内容
 2. 网站没有影响用户体验的广告
 3. 网站不得长期处于不可访问的状态
 4. 网站没有大量非原创内容
-**
+```
+
 <br>
-### 格式：
+# 格式：
 ```
 网站图标地址：https://hsz75.github.io/favicon.ico
 网站名称:笔稽DE网站
 网站链接：https://hsz75.github.io
 网站介绍(可选):一个普通的网站
 ```
-### 完
-
+# 完
 &copy;2022&nbsp;笔稽DE网站
+
+
+
+<span id="span">&nbsp;</span>
 
 <script src="/files/js/footer.js"></script>
 <script src="/files/js/log.js"></script>
