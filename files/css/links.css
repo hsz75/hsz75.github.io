@@ -1,0 +1,50 @@
+body{
+	margin:0;
+	padding:0;
+}
+
+body b,body strong,body h1
+{
+font-family: "Noto Sans SC";
+font-weight:700 !important;
+}
+
+a:{
+        color:gary;
+        text-decoration:none;
+}
+a:visited {
+    color:red;
+    text-decoration:none;
+}
+a:hover{
+        text-decoration:underline;
+        background-color:#FFFFFF;
+        transition:all 0.3s;
+}
+a:active {
+    color:#FFFFFF;
+    text-decoration:none;
+}
+
+.box{
+﻿	height: 30em;
+    width: 30em;
+    border:1px solid black;
+    border-radius:5px;
+	/*background-image:url(emm); */
+	background-image:linear-gradient(#000000, rgb(113,113,113));;
+﻿}
+.box a,b{
+	line-height:1em;
+	background:white;
+}
+.box img{
+	border-radius:1em;
+}
+.box:hover{
+	transition:0.5s;
+    box-shadow:2px 2px 23px 2px rgba(1,1,1,1.5);
+	border-radius:10px;
+	-moz-border-radius:1em; 
+﻿}

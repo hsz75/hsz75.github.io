@@ -1,28 +1,19 @@
 ﻿<title>链接 - 笔稽DE网站</title>
-﻿<style type="text/css">
-﻿.box{
-﻿	margin:auto;
-﻿	text-align:center;
-﻿	height:350px;
-    width:300px;
-    border:1px solid black;
-    border-radius:0px;
-﻿}
-﻿.box:hover{
-    box-shadow:2px 2px 23px 2px rgba(1,1,1,1.5);
-	border-radius:10px;
-	-moz-border-radius:10px; 
-﻿}
-﻿</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:100,300,400,500,700,900">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Times+New+Roman:100,300,400,500,700,900">
+﻿<link rel="stylesheet" type="text/css" media="screen" href="/files/css/links.css">
 ﻿<script>title="链接 - 笔稽DE网站";</script>
 # 网站目录
 - [主页](/)
 - [稽本](/jipad)
 - [友链](/links)
-- <a href="javascript:alert('下次一定啦')">关于</a>
+- <a href="javascript:alert('这个页面下次再做啦')">关于</a>
 # 基岩般的友谊
 <div class="box">
-|![电脑菌](https://dnyyfb.xyz:6336/wp-content/uploads/2021/11/cropped-%E7%94%B5%E8%84%91%E8%8F%8C-32x32.png)|<br>电脑菌工作室|<br>
+<img src="https://dnyyfb.xyz:6336/wp-content/uploads/2021/11/cropped-%E7%94%B5%E8%84%91%E8%8F%8C-32x32.png" height="32" width="32" title="电脑菌工作室" alt="电脑菌工作室">
+<br>
+<b>电脑菌工作室</b>
+<br>
 <a href="https://dnyyfb.xyz:6336" target="_blank">https://dnyyfb.xyz:6336</a>
 </div>
 <br>
@@ -35,6 +26,7 @@
 ```
 
 <br>
+
 # 格式：
 ```
 网站图标地址：https://hsz75.github.io/favicon.ico
@@ -44,11 +36,9 @@
 ```
 # 完
 &copy;2022&nbsp;笔稽DE网站
+<script id="span"></script>
 
-
-
-<span id="span">&nbsp;</span>
-
+<iframe src="/files/htmlpage/talkwith.html"></iframe>
 <script src="/files/js/footer.js"></script>
 <script src="/files/js/log.js"></script>
 <script src="/files/js/tip.js"></script>
