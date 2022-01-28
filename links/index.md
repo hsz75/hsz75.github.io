@@ -36,8 +36,9 @@
 ```
 # 完
 <iframe src="/files/htmlpage/talkwith.html"></iframe>
-&copy;2022&nbsp;笔稽DE网站
-<span id="span"></script>
+<b>&copy;2022&nbsp;笔稽DE网站
+<span id="span"></span>
+</b>
 <script src="/files/js/footer.js"></script>
 <script src="/files/js/log.js"></script>
 <script src="/files/js/tip.js"></script>
