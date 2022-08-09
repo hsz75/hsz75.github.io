@@ -1,6 +1,8 @@
 body{
-    margin:0;
+    margin:auto;
     padding: 0;
+    height:100%;
+    width:85%;
     font-family: "Noto Sans SC";
 }
 body a:link{
@@ -56,22 +58,36 @@ border-right: 1px solid #F3F3F3;
 
 .content{
 margin:auto;
-height: auto;
-width:75%;
+width:85%;
+background-color: white;
 }
 
-@media (max-width: 700px){
-.content{
+@media (max-width: 600px){
+body{
     width:90% !important;
+    height:100%;
 }
 }
 
 @media (max-width:700px){
 .box{
-    width:50% !important;
-    height: 18em !important;
+    width:100% !important;
+    height: 20em !important;
 }
 }
+
+@media (max-width:700px){
+    .normal{
+        width:100% !important;
+        height: 20em !important;
+    }
+    }
+
+    @media (max-width:700px){
+        .content{
+            width:90% !important;
+        }
+        }
 
 .back
 {
@@ -87,8 +103,8 @@ width:75%;
     transition: 0.5s all;
 }
 .box{
-width: 30%;
-height: 18em;
+width: 55%;
+height: 25em;
 border:1px solid black;
 border-radius:5px;
 line-height: 1;
@@ -124,4 +140,12 @@ transition:0.5s all;
 box-shadow:2px 2px 23px 2px rgba(1,1,1,1.5);
 border-radius:10px;
 -moz-border-radius:1em; 
+}
+
+.normal{
+        width: 50%;
+        height: 23em;
+        border-radius:5px;
+        background-color: white;
+        overflow: hidden;
 }
