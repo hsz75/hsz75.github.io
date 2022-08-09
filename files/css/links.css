@@ -9,7 +9,7 @@ font-family: "Noto Sans SC";
 font-weight:700 !important;
 }
 
-a:{
+a:link{
         color:gary;
         text-decoration:none;
 }
