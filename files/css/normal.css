@@ -11,11 +11,11 @@ body a:link{
     text-decoration:none;
 }
 body a:hover{
-    color:aquamarine;
+    color:rgb(208, 230, 18);
     text-decoration: underline;
 }
 body a:visited{
-    color:#E9E900;
+    color:#BF3F3F;
     font-weight: bold !important;
 }
 body h1{
@@ -65,7 +65,7 @@ background-color: white;
 @media (max-width: 600px){
 body{
     width:90% !important;
-    height:100%;
+    height:auto;
 }
 }
 
@@ -103,7 +103,7 @@ body{
 }
 .box{
 width: 55%;
-height: 25em;
+height: 10em;
 border:1px solid black;
 border-radius:5px;
 line-height: 1;
