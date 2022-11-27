@@ -69,12 +69,62 @@ body{
 }
 }
 
+.content_line{ /*友链长条*/
+    border:1px solid black;
+    height:25px;
+    width:75%
+}
+.content_line img{
+    height:20px;
+    width: 20px;
+}
+.content_line:hover{
+    text-decoration: underline;
+    transition:0.5s all;
+    box-shadow:2px 2px 23px 2px rgba(1,1,1,1.5);WW
+}
+
 @media (max-width:700px){
+     /*宽度<700时生效*/ 
 .box{
     width:100% !important;
-    height: 20em !important;
+    height:20em !important;
 }
 }
+
+.box{ /* 友链，首页视频*/
+    width: 55%;
+    height: 25em;
+    border:1px solid black;
+    border-radius:5px;
+    line-height: 1;
+    /*background-image:url(emm); 
+    background-image:linear-gradient(#000000, rgb(113,113,113));*/
+    background-color: white;
+    overflow: hidden;
+    }
+    .box a:link{
+    color: red;
+    line-height:2em;
+    text-decoration: none;
+    }
+    
+    .box a:visited{
+        text-decoration: underline !important;
+        color: rgb(94, 94, 126);
+        line-height: 10%;
+    }
+    .box img{
+    border-radius:1em;
+    }
+    .box:hover{
+    text-decoration: underline;
+    transition:0.5s all;
+    box-shadow:2px 2px 23px 2px rgba(1,1,1,1.5);
+    border-radius:10px;
+    -moz-border-radius:1em; 
+    }
+    
 @media (max-width:700px){
     .normal{
         width:100% !important;
@@ -100,45 +150,6 @@ body{
 .back:hover{
     background-color: #ED6677;
     transition: 0.5s all;
-}
-.box{
-width: 55%;
-height: 10em;
-border:1px solid black;
-border-radius:5px;
-line-height: 1;
-/*background-image:url(emm); 
-background-image:linear-gradient(#000000, rgb(113,113,113));*/
-background-color: white;
-overflow: hidden;
-}
-.box a:link{
-color: red;
-line-height:2em;
-text-decoration: none;
-}
-
-.box a:visited{
-    text-decoration: underline !important;
-    color: rgb(94, 94, 126);
-    line-height: 10%;
-}
-
-.box a:hover{
-    color: red;
-    text-decoration: underline;
-}
-.box img{
-border-radius:1em;
-}
-.box p{
-    color:white;
-}
-.box:hover{
-transition:0.5s all;
-box-shadow:2px 2px 23px 2px rgba(1,1,1,1.5);
-border-radius:10px;
--moz-border-radius:1em; 
 }
 
 .normal{
