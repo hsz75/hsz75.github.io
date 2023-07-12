@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <title>example</title>
+</head>
+
+<body>
+    <style>
+        #textarea1 {
+            resize: horizontal;
+            /* 允许用户在水平方向上调整宽度 */
+            width: 100%;
+            /* 初始宽度设置为100% */
+        }
+
+        .custom-select {
+            position: relative;
+            display: inline-block;
+            overflow: hidden;
+        }
+
+        .custom-select select {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            /* background-color: transparent;*/
+            border: none;
+            padding: 0.5em;
+            font-size: 1em;
+            color: #000;
+        }
+    </style>
+    <h1>Example</h1>
+    <form action="#">
+        <div class="custom-select">
+            <label for="lang"></label>
+            <select name="yan" id="yan"
+                onchange="document.form1.textarea1.value=document.form1.textarea1.value+options[selectedIndex].value;">
+                <option value="">颜文字</option>
+                <option value="（￣▽￣）" id="yan1">（￣▽￣）</option>
+            </select>
+        </div>
+        <!-- <button onclick="add()">增加</button>-->
+    </form>
+    <form name="form1" id="form1">
+        <textarea name="textarea1" id="textarea1" rows="100%" maxlength="100"></textarea>
+        <br>
+    </form>
+    <button onclick="check()">提交</button>
+
+    <script type="text/javascript">
+
+        if (document.referrer == '')
+        {
+            alert("欢迎!感谢你记住我的网站");
+        }else{
+            alert("欢饮!");
+        }
+
+        const least_size = 100; //常量
+        var level = 1;//变量
+        //监听事件
+        //document.getElementById("textarea1").addEventListener("click", ); 
+        window.addEventListener('resize', adjustTextareaSize);
+
+        function adjustTextareaSize() {
+            const textarea = document.getElementById('textarea1');
+            textarea.style.width = '100%'; // 将宽度重置为100%
+            textarea.style.height = '100%'; // 将宽度重置为100%
+        }
+
+        function check() {
+            var nword = 0;
+            let text = document.form1.textarea1.value;
+            let reg_n1 = /[习?近?平]\[江?泽?民]/gm;
+            let reg_n2 = /<script>/g;
+                let regexp = reg_n1+reg_n2;
+            let result = text.match(regexp);
+            if (result) {
+                nword = result.length;
+                if (nword > 0) {
+                    alert("有" + nword + "处敏感词");
+                }
+            } else {
+                alert("成功");
+            }
+        }
+
+
+        /* if (result && result[0] == "<script>") {
+            alert("含有禁止的字符");*/
+
+        /*
+        废弃代码
+        function add() 
+        {
+            value = document.form1.textarea1.value;
+            addvalue = document.document.getElementById("yan").value;
+            document.form1.textarea1.value = value + addvalue;
+        }*/
+    </script>
+</body>
+
+</html>
