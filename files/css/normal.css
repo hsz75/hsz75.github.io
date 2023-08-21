@@ -1,5 +1,5 @@
 body{
-    margin:auto;
+    margin:0 auto;
     padding: 0;
     height:100%;
     width:85%;
@@ -84,25 +84,24 @@ body{
     box-shadow:2px 2px 23px 2px rgba(1,1,1,1.5);WW
 }
 
-@media (max-width: 700px){
-     /*宽度<700时生效*/ 
+ @media (max-width: 700px){
+     /*宽度<700时生效*/
 .box{
     width:100% !important;
-    height:20em !important;
+    height:auto !important;
 }
 }
 
-.box{ /* 友链，首页视频*/
-    width: 55%;
-    height: 25em;
-    border:1px solid black;
-    border-radius:5px;
-    line-height: 1;
-    /*background-image:url(emm); 
-    background-image:linear-gradient(#000000, rgb(113,113,113));*/
+
+.box {/*友链，首页视频*/
+    width: 75%;
+    height: 50%;
+    border: 1px solid black;
+    border-radius: 5px;
+    line-height: 1cm;
     background-color: white;
-    overflow: hidden;
-    }
+}
+
     .box a:link{
     color: red;
     line-height:2em;
