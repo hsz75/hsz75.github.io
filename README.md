@@ -11,6 +11,6 @@
 <br>
 [友链](links.html "友链")
 <br>
-[关于]("about.html" "关于")
+[关于](about.html "关于")
 <br>
 &copy;Copyright hsz75的网站 2021-2023
