@@ -6,3 +6,8 @@
 目前，网站正在建设中，你可以通过 [https://github.com/hsz75/hsz75.github.io](https://github.com/hsz75/hsz75.github.io "所有页面")这个链接查看所有页面
 
 我的Bilibili: [bilibili](https://space.bilibili.com/202673925 "我的Bilibili")
+
+其他链接
+[友链](links.html "友链")
+<br>
+[关于]("about.html" "关于")
