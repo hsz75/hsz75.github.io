@@ -34,6 +34,7 @@
             body iframe{
                 width:100%;
                 height:100%;
+                border: none;
             }
         }
 
@@ -96,7 +97,7 @@
                 <p>点击以下链接，下载edge浏览器后点击下一步</p>
                 <a href="https://www.microsoft.com/zh-cn/edge/download" target="_blank">点此下载edge浏览器</a>
                 <center>
-                    <img src="image/电脑下载.png">
+                    <a href="https://sm.ms/image/cD56BfNCVwsWi8z" target="_blank"><img src="https://s2.loli.net/2023/10/20/cD56BfNCVwsWi8z.png" alt="电脑端下载" title="电脑端下载" ></a>
                     <br>
                     <b class="info">电脑端请按照上图操作</b>
                 </center>
@@ -107,7 +108,7 @@
                         target="_blank">这里</a></b>
                 <br>
                 <center>
-                    <img src="image/下载.png">
+                    <a href="https://sm.ms/image/qAETtJOLSI1Mjen" target="_blank"><img src="https://s2.loli.net/2023/10/20/qAETtJOLSI1Mjen.png" alt="手机端下载" title="手机端下载"></a>
                     <br>
                     <b class="info">手机端请按照上图指示操作</b>
                 </center>
@@ -126,39 +127,33 @@
                 <br>
                 <b>如果已经安装完成需要注册，请到<a href="http://24mail.chacuo.net/" target="_blank">此处</a>获取一个临时邮箱进行注册</b>
                 <br>
-                <img src="image/注册.png"><br>
+                <a href="https://sm.ms/image/iZGXdEDUxwBR7Kc" target="_blank"><img src="https://s2.loli.net/2023/10/20/iZGXdEDUxwBR7Kc.png" title="邮箱注册" alt="邮箱注册"></a><br>
                 <b class="info">临时邮箱界面</b>
             </div>
 
             <br>
 
             <div id="step3">
+                <hr>
                 <h1>
                     测试视频
                 </h1>
-                <center><b>如果能正常显示（如下图）的话就算成功了！</b>
+                <center><b>点击按钮测试后，如果能正常显示（如下图）的话就算成功了！</b>
                     <br>
                     <img src="image/示例.png" width="280" height="315" />
                     <br>
                     <b class="info">如图所示</b>
                     <br>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/ExqqdUXXdgA?si=ssodp56KtWwcGK1d"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen></iframe>
-                    <br>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/I1At6oBpAPo?si=XNtzBb5Sc8ibNZaf"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen></iframe>
+                    <button id="test_bu" onclick="test();">点我进行测试</button>
+                    <div id="test"></div>
                     <br>
                 </center>
             </div>
-            <div style="user-select:text;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;" id="step4">
+            <div style="user-select:text;" id="step4">
                 <h2>推荐链接</h2>
                 <center>如果点进链接后可以浏览就说明成功了！</center>
                 <hr>
-                <table border="1" target="_blank">
+                <table border="1" target="_blank" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
                     <tr>
                         <th>网址（点击可跳转）</td>
                         <th>名称(俗称)、类型</td>
@@ -214,7 +209,7 @@
                 </table>
             </div>
             <button onclick="upstep();" id="up">上一步</button>
-            <button onclick="tostep();" id="down">下一步</button>
+            <button onclick="tostep();" id="down" style="float:right;">下一步</button>
             <hr>
             <footer><b>&copy;2023&nbsp;版权所有</b></footer>
             <script>
