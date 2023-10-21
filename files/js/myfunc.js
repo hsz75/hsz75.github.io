@@ -68,8 +68,22 @@ function upstep() {
     }
 }
 
+
+
 function test() {
     test_bu.innerHTML="<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/ExqqdUXXdgA?si=ssodp56KtWwcGK1d\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\"></iframe><br><iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/I1At6oBpAPo?si=XNtzBb5Sc8ibNZaf\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>";
-    test_txt.innerHTML="如果不行……<br>点我重试<br>（最好检查软件后再试）"
+    test_txt.innerHTML="如果还有<b id=\"count\">15</b>秒还没加载出来的话……<br>点我重试（最好检查软件后再试）";
+    var time=15;
+    document.getElementById("count").innerHTML=time;
+    setInterval(function (){
+        if (time>0){
+        time--;
+        document.getElementById("count").innerHTML=time;
+        console.info(time);
+        }else{
+            test_txt.innerHTML="如果视频还没出现的话就检查一下软件再点我刷新<br>如果出现了就点击“下一步”吧";
+            clearInterval();
+        }
+    },1000)
 }
 
