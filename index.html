@@ -1,0 +1,117 @@
+﻿<!doctype html>
+<html lang="zh-cn">
+
+<head>
+	<meta charset="utf-8">
+	<title>笔稽DE网站</title>
+	<link rel="shorticon" href="favicon.ico">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Times+New+Roman:100,300,400,500,700,900">
+	<link rel="stylesheet" href="files/css/normal.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=yes">
+
+</head>
+
+<body bgcolor="#F3F3F3">
+	<audio preload="auto" src="files/nya.mp3" id="nya_a1">
+		<source>
+			Your browser does not support the audio element.
+		</source>
+	</audio>
+	<h1 style="text-align: left;">笔稽</h1>
+	<div class="top">
+		<li><a href="/">主页</a></li>
+		<li><a href="//space.bilibili.com/202673925" target="_blank">视频</li>
+		<!-- <li><a href="javascript:alert('还没写呢');" id="tips_1">文章</a></li>-->
+		<li><a href="passage/mynotes.html">小事记</a></li>
+		<li><a href="work/jipad">稽本</a></li>
+		<li><a href="links.html">链接</a></li>
+		<li><a href="about.html">关于</a></li>
+	</div>
+	<br>
+	<center>
+
+		
+	<div class="box">
+		<iframe src="//player.bilibili.com/player.html?aid=984142066&bvid=BV1et4y1378y&cid=796359168&page=1" scrolling="no" border="1" frameborder="no" framespacing="0" style="height:85%;width:100%;"> </iframe>
+		<span id="viedo_1v"></span><br><a href="//baidu.com" id="jump_1v">去围观</a>
+		</div>
+	</div>
+
+	<div style="background-color: #f3f3f3;border:1em solid gainsboro;border-radius: 3px; width:50%;margin:auto;line-height: 5em;  "
+	class="box" id="box">
+	<img src="https://github.githubassets.com/images/mona-loading-dark.gif" height="128" width="128"
+		style="margin:5em;" alt="Github触手猫" title="此页面建设中" id="cat"></img>
+	<br>
+	<b id="nya">建设中</b>
+</div>
+	</center>
+	<br>
+	<div>
+		<a href="https://space.bilibili.com/202673925" target="_blank" alt="笔稽菌DEBilibili" title="Bilibili"><img
+				src="files/image/svg/bilibili.svg" width="32" height="32"></a>
+		<a href="https://github.com/hsz75" target="_blank" alt="Github" title="Github"><img
+				src="files/image/svg/github.svg" width="32" height="32"></a>
+		<a target="_blank" href="https://jq.qq.com/?_wv=1027&amp;k=3UC9IdVi"><img src="files/image/svg/qq.svg" alt="QQ群"
+				title="笔稽DE小屋(QQ群)" width="32" height="32"></a>
+		<br>
+		<a href="https://icp.gov.moe/?keyword=20222333" target="_blank"><img src="https://icp.gov.moe/images/ico64.png"
+				height="30" width="30">萌ICP备20222333号</a>
+		<br>
+		<span id="span"><noscript>如果你看到我，就说明你浏览器禁用了本页的JavaScript</noscript></span>
+		<p>&copy;20212024&nbsp;笔稽DE网站</p>
+		</b>
+		<script src="files/js/footer.js"></script>
+		<script src="files/js/log.js"></script>
+		<script src="files/js/content.js"></script>
+	</div>
+
+
+</body>
+<script type="text/javascript">
+	var donts = 0;
+	var event=true;
+	const cat=document.getElementById("cat");
+	const nya_a1=document.getElementById("nya_a1");
+	//const nya_a2=document.getElementById("nya_a2");
+	const nya = document.getElementById("nya");
+	const box=document.getElementById("box");
+
+
+
+	setInterval(function () {
+		if (event == false) {
+			donts = 0;
+			nya.innerHTML = "喵"; //活动停止时更改标题
+		} else {
+			if (donts==3){
+			donts = 0;
+			nya.innerHTML = "建设中";//点数足够后重置标题
+		}else{
+			donts++;
+			nya.innerHTML = nya.innerHTML + "."; //点数不足时加点
+		}
+	}
+	}, 1000);
+
+
+	box.addEventListener('mouseover', function () { //活动停止
+		event=false;
+	});
+
+	box.addEventListener('mouseout', function () { //松开鼠标后还原标题
+		nya.innerHTML="建设中";
+		event=true;//活动继续
+	});
+
+	box.addEventListener('click', function () { //单击时播放音效
+		nya_a1.load();
+		nya_a1.play();
+	});
+
+	cat.addEventListener('mouseover',function (){
+		cat.style.cursor="grab"
+	})
+
+</script>
+
+</html>
