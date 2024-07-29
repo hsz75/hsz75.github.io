@@ -16,8 +16,10 @@ txt+= "<p>硬件平台: " + navigator.platform + "</p>";
 txt+= "<p>用户代理: " + navigator.userAgent + "</p>";
 txt+= "<p>用户代理语言: " + navigator.language + "</p>";
 document.getElementById("example").innerHTML=txt;
-if (navigator.userAgent.includes("QQ")===true ){
+if (navigator.userAgent.includes("QQ") == true ){
     alert("QQ");
+}else{
+    alert("NO!!");
 }
 </script>
 
