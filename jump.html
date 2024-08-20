@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>请先用浏览器打开再继续！</title>
+    <link rel="shorticon" href="favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=yes">
+</head>
+
+<body>
+    <style text="text/css">
+        body {
+            background-color: black;
+            overflow: hidden;
+        }
+
+        div {
+            position: relative;
+            top: 40px;
+            left: 40px;
+            color: white;
+            box-shadow: 1px 1px 1px 1px black;
+        }
+    </style>
+    <div>
+        <h1>温馨提示</h1>
+        <p><b id="tip">请先复制原链接，用浏览器打开再继续！</b></p>
+        <a onclick="copy();"><span id="origin"></span></a>
+    </div>
+</body>
+
+<script>
+    var link = new URLSearchParams(window.location.search).get('link');
+    var tip = document.getElementById("tip");
+    var origin = document.getElementById("origin");
+
+    if (link.includes("https") == true && link.includes("hsz75.github.io")==true){
+        origin.textContent = link;
+    }else{
+        tip.textContent="哎呀，你怎么掉到这儿来了<__>";
+    }
+
+    function copy() {
+        /* 选择复制内容 */
+        tip.select();
+        tip.setSelectionRange(0, 99999); /* 为移动设备设置 */
+
+        /* 复制内容到文本域 */
+        navigator.clipboard.writeText(tip.value);
+    }
+</script>
+
+</html>
