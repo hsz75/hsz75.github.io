@@ -26,7 +26,8 @@
     <div>
         <h1>温馨提示</h1>
         <p><b id="tip">请先复制原链接，用浏览器打开再继续！</b></p>
-        <a onclick="copy();"><span id="origin"></span></a>
+        <p>或者点击右上角，并选择使用浏览器打开（建议不要用系统自带的，可以用<a href="https://viayoo.com/zh-cn/docs/get-via.html">via浏览器</a>）</p>
+        <a onclick="copy();"><span id="origin"><b></b></span></a>
     </div>
 </body>
 
@@ -35,8 +36,8 @@
     var tip = document.getElementById("tip");
     var origin = document.getElementById("origin");
 
-    if (link.includes("https") == true && link.includes("hsz75.github.io")==true){
-        origin.textContent = link;
+    if (link.includes("hsz75.github.io")==true){
+        origin.textContent = "原链接:\n"+link;
     }else{
         tip.textContent="哎呀，你怎么掉到这儿来了<__>";
     }
@@ -48,6 +49,18 @@
 
         /* 复制内容到文本域 */
         navigator.clipboard.writeText(tip.value);
+    }
+
+    if (navigator.userAgent.includes("QQ") == true ){
+    //window.location.href="jump.html?link="+window.location;
+    }else if (navigator.userAgent.includes("qq") == true){
+    //window.location.href="jump.html?link="+window.location;
+    }else if (navigator.userAgent.includes("360") == true){
+    //window.location.href="jump.html?link="+window.location;
+    }else if (navigator.userAgent.includes("wechat") == true){
+    //window.location.href="jump.html?link="+window.location;
+    }else{
+        window.location.href=link;
     }
 </script>
 
