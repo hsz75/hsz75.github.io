@@ -87,3 +87,6 @@ function test() {
     },1000)
 }
 
+function test2(){
+    document.getElementById("test2").innerHTML="<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/I1At6oBpAPo?si=XNtzBb5Sc8ibNZaf\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>";
+}
