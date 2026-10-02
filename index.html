@@ -68,15 +68,14 @@
 <script type="text/javascript">
 	var donts = 0;
 	var event=true;
-	var table= document.querySelector('class~="VIpgJd"'); //查找特定属性的标签VIpgJd-ZVi9od
+	var table = document.querySelector('[class*="VIpgJd"]');//查找特定属性的标签VIpgJd-ZVi9od
 	const cat=document.getElementById("cat");
 	const nya_a1=document.getElementById("nya_a1");
 	//const nya_a2=document.getElementById("nya_a2");
 	const nya = document.getElementById("nya");
 	const box=document.getElementById("box");
 	const title=document.getElemenyById("title");
-	const trans_Plug=document.getElementByID("google_translate_element");
-
+	const trans_Plug=document.getElementByID("google_translate_element"); 
 
 
 	setInterval(function () {
@@ -117,8 +116,6 @@
 	
 	trans_Plug.addEventListener("click",function(){ //检测谷歌翻译是否开启（导航栏选择框）
 		var e = document.querySelector(".goog-te-combo");
-		
-		
 		if (e.value != null || e.value == ''){ //值是否空白，是就修改英文标题
 			title.content="hsz75 's room";
 		}
