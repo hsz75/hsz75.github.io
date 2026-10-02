@@ -94,6 +94,11 @@
 	}, 1000);
 
 
+
+	table.addEventListener("click",function(){ //检测谷歌翻译是否开启 上方的表格按钮
+		title.content="hsz75 's room";
+	})
+});
 	box.addEventListener('mouseover', function () { //活动停止
 		event=false;
 	});
@@ -114,16 +119,7 @@
 
 
 	
-	trans_Plug.addEventListener("click",function(){ //检测谷歌翻译是否开启（导航栏选择框）
-		var e = document.querySelector(".goog-te-combo");
-		if (e.value != null || e.value == ''){ //值是否空白，是就修改英文标题
-			title.content="hsz75 's room";
-		}
-	})
 
-	table.addEventListener("click",function(){ //检测谷歌翻译是否开启 上方的表格按钮
-		title.content="hsz75 's room";
-	})
 
 
 	
@@ -458,6 +454,15 @@
   };
 
 })();
+
+window.addEventListener("DOMContentLoaded", (event) => { //加载完成再执行
+	trans_Plug.addEventListener("click",function(){ //检测谷歌翻译是否开启（导航栏选择框）
+		var e = document.querySelector(".goog-te-combo");
+		if (e.value != null || e.value == ''){ //值是否空白，是就修改英文标题
+			title.content="hsz75 's room";
+		}
+	})
+
 </script>
   <script
             type="text/javascript"
