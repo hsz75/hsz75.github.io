@@ -30,15 +30,6 @@
 	</div>
 	<br>
 	<center>
-
-		
-	<!--<div class="box">
-		<iframe src="//player.bilibili.com/player.html?aid=984142066&bvid=BV1et4y1378y&cid=796359168&page=1" scrolling="no" border="1" frameborder="no" framespacing="0" style="height:85%;width:100%;"> </iframe>
-		<span id="viedo_1v"></span><br><a href="//baidu.com" id="jump_1v">去围观</a>
-		</div>
-	</div>
--->
-
 	<div style="background-color: #f3f3f3;border:1em solid gainsboro;border-radius: 3px; width:50%;margin:auto;line-height: 5em;  "
 	class="box" id="box">
 	<img src="https://github.githubassets.com/images/mona-loading-dark.gif" height="128" width="128"
@@ -46,6 +37,11 @@
 	<br>
 	<b id="nya">建设中</b>
 </div>
+		<div class="box">
+		<iframe src="//player.bilibili.com/player.html?aid=984142066&bvid=BV1et4y1378y&cid=796359168&page=1" scrolling="no" border="1" frameborder="no" framespacing="0" style="height:85%;width:100%;"> </iframe>
+		<span id="viedo_1v"></span><br><a href="//baidu.com" id="jump_1v">去围观</a>
+		</div>
+	</div>
 	</center>
 	<br>
 	<div>
@@ -66,7 +62,6 @@
 		<script src="files/js/log.js"></script>
 		<script src="files/js/content.js"></script>
 	</div>
-
 
 
 </body>
@@ -124,7 +119,7 @@
 		var e = document.querySelector(".goog-te-combo");
 		
 		
-		if (e.value != null or e.value == '' or){
+		if (e.value != null or e.value == ''){ //值是否空白，是就修改英文标题
 			title.content="hsz75 's room";
 		}
 	})
