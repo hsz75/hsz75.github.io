@@ -17,7 +17,7 @@
 			Your browser does not support the audio element.
 		</source>
 	</audio>
-	<h1 style="text-align: left;">笔稽</h1>
+	<h1 style="text-align: left;" translate="no" id="title">笔稽</h1>
 	<div class="top">
 		<li><a href="/">主页</a></li>
 		<li><a href="//space.bilibili.com/202673925" target="_blank">视频</li>
@@ -73,11 +73,14 @@
 <script type="text/javascript">
 	var donts = 0;
 	var event=true;
+	var table= document.querySelector('class~="VIpgJd"') //查找特定属性的标签VIpgJd-ZVi9od
 	const cat=document.getElementById("cat");
 	const nya_a1=document.getElementById("nya_a1");
 	//const nya_a2=document.getElementById("nya_a2");
 	const nya = document.getElementById("nya");
 	const box=document.getElementById("box");
+	const title=document.getElemenyById("title");
+	const trans_Plug=document.getElementByID("google_translate_element");
 
 
 
@@ -114,6 +117,24 @@
 	cat.addEventListener('mouseover',function (){
 		cat.style.cursor="grab"
 	})
+
+
+	
+	trans_Plug.addEventListener("click",function(){ //检测谷歌翻译是否开启（导航栏选择框）
+		var e = document.querySelector(".goog-te-combo");
+		
+		
+		if (e.value != null or e.value == '' or){
+			title.content="hsz75 's room";
+		}
+	})
+
+	table.addEventListener("click",function(){ //检测谷歌翻译是否开启 上方的表格按钮
+		title.content="hsz75 's room";
+	})
+
+
+	
 
 
 
@@ -302,7 +323,7 @@
     var input = doc.createElement('input');
     input.id = INPUT_ID;
     input.type = 'text';                    // 类型是"文本"
-    input.placeholder = '搜索语言…';        // 灰色的提示字
+    input.placeholder = 'Search…';        // 灰色的提示字
     input.setAttribute('autocomplete', 'off'); // setAttribute 是"设置一个属性"
     input.setAttribute('spellcheck', 'false');
 
