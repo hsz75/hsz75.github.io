@@ -26,6 +26,7 @@
 		<li><a href="works/jipad">稽本</a></li>
 		<li><a href="links.html">链接</a></li>
 		<li><a href="about.html">关于</a></li>
+		<div id="google_translate_element" style="align:right"></div>
 	</div>
 	<br>
 	<center>
@@ -65,6 +66,7 @@
 		<script src="files/js/log.js"></script>
 		<script src="files/js/content.js"></script>
 	</div>
+
 
 
 </body>
@@ -113,6 +115,339 @@
 		cat.style.cursor="grab"
 	})
 
-</script>
 
+
+
+
+		 function googleTranslateElementInit() {
+                new google.translate.TranslateElement({ pageLanguage: 'zh' }, 'google_translate_element');
+            }
+
+
+
+
+	
+	/* ============================================================
+ * 整个脚本被包在下面这个函数里。
+ * function 是 JavaScript 的关键字，意思是"定义一个函数"。
+ * 后面那对 () 表示"立刻执行"，所以整段代码会马上跑起来。
+ * ============================================================ */
+(function () {
+
+  /* ------------------------------------------------------------
+   * var 是"声明一个变量"的关键字。
+   * 变量就像一个贴着名字的盒子，里面可以装东西（数字、文字等）。
+   * 下面这些盒子装的都是"一串文字"，用单引号或双引号包起来，
+   * 这种用引号包起来的文字，JS 里叫"字符串"。
+   * ------------------------------------------------------------ */
+  var LINK_SEL = 'a.VIpgJd-ZVi9od-vH1Gmf-ibnC6b';  // 语言项的"选择器"
+  var TEXT_SEL = '.text';                            // 语言名的"选择器"
+  var WRAP_ID  = 'gt-lang-search-wrap';              // 外层盒子的 id
+  var INPUT_ID = 'gt-lang-search-input';             // 搜索框的 id
+  var STYLE_ID = 'gt-lang-filter-style';             // 样式标签的 id
+  var HIDDEN   = 'gt-lang-filtered';                 // 隐藏用的 class 名
+  var BOUND_FLAG = '__gtLangFilterBound';            // 防止重复绑定的记号
+
+
+  /* ============================================================
+   * function 定义一个"函数"。
+   * 函数 = 一段可以被反复调用的代码，像一台机器：
+   *   你往里面放"原材料"（参数），它给你"成品"（返回值）。
+   * 下面这个函数的原材料是 doc（文档），
+   * 效果是"给这个文档注入好看的 CSS 样式"。
+   * ============================================================ */
+  function ensureStyle(doc) {
+
+    /* if 是"如果"的关键字，后面括号里写条件。
+     * doc.getElementById(STYLE_ID)：
+     *   getElementById 是"按 id 找一个元素"的意思。
+     *   如果找到，说明之前注入过，就执行 return（返回、结束函数）。
+     * return 是"结束函数，直接走人"的关键字。 */
+    if (doc.getElementById(STYLE_ID)) return;
+
+    /* createElement 是"创建一个新元素"的意思。
+     * 下面这句就是造一个 <style> 标签，装进变量 s。 */
+    var s = doc.createElement('style');
+
+    /* 给这个 style 标签起个 id，方便下次认出来。 */
+    s.id = STYLE_ID;
+
+    /* textContent 是"这个元素里的文字内容"。
+     * 给 style 标签的 textContent 赋值，就等于往里面塞 CSS 代码。
+     * 下面把好几段 CSS 用 + 号拼成一整段。
+     * 字符串里出现的 \n 表示"换行"。 */
+    s.textContent =
+      '.' + HIDDEN + ' { display: none !important; }\n' +
+      '#' + WRAP_ID + ' {\n' +
+      '  padding: 6px 8px;\n' +
+      '  border-bottom: 1px solid #e0e0e0;\n' +
+      '  background: #fff;\n' +
+      '  position: sticky;\n' +
+      '  top: 0;\n' +
+      '  z-index: 1;\n' +
+      '}\n' +
+      '#' + INPUT_ID + ' {\n' +
+      '  width: 100%;\n' +
+      '  box-sizing: border-box;\n' +
+      '  padding: 5px 9px;\n' +
+      '  font-size: 13px;\n' +
+      '  line-height: 1.4;\n' +
+      '  border: 1px solid #dadce0;\n' +
+      '  border-radius: 4px;\n' +
+      '  outline: none;\n' +
+      '  font-family: inherit;\n' +
+      '}\n' +
+      '#' + INPUT_ID + ':focus { border-color: #1a73e8; }';
+
+    /* appendChild 是"把某个元素塞进另一个元素的末尾"。
+     * 这里把刚造的 <style> 塞进 <head> 末尾。
+     * || 是"或者"的意思：(A || B) 如果 A 没值就用 B。 */
+    (doc.head || doc.documentElement).appendChild(s);
+  }
+
+
+  /* ============================================================
+   * 过滤函数：根据用户输入的关键字，显示或隐藏语言项。
+   * 参数 container 是"装语言的那个大盒子"，
+   * 参数 kw 是"用户输入的关键字"（kw = keyword 的缩写）。
+   * ============================================================ */
+  function applyFilter(container, kw) {
+
+    /* 下面这一行的动作分解：
+     *   kw || ''           如果 kw 是空的，就用空字符串代替
+     *   .trim()            去掉两头的空格（" 英语 " → "英语"）
+     *   .toLowerCase()     全部转成小写（"ABC" → "abc"）
+     * 结果装进变量 key。 */
+    var key = (kw || '').trim().toLowerCase();
+
+    /* querySelectorAll 是"找出所有符合条件的元素"。
+     * 条件写在括号里，用的是"选择器"语法（和 CSS 一样）。
+     * 这里就是把 container 里所有的语言项 <a> 全找出来。 */
+    var links = container.querySelectorAll(LINK_SEL);
+
+    /* Array.prototype.forEach.call(links, 函数)
+     * 意思是："对 links 里的每一个元素，都做一遍后面那个函数"。
+     * 下面那个 function(a) 里，a 就是"当前正在处理的这一个 <a>"。 */
+    Array.prototype.forEach.call(links, function (a) {
+
+      /* querySelector（注意没有 All）是"只找第一个符合条件的"。
+       * 这里在 <a> 内部找语言名所在的 <span class="text">。 */
+      var t = a.querySelector(TEXT_SEL);
+
+      /* 下面这一行的写法 ? 和 : 叫"三元表达式"，
+       * 可以读作："t 存在吗？存在就用 t.textContent，不存在就用空字符串"。
+       * textContent 是"这个元素里的文字"。
+       * 再 trim() 去空格，toLowerCase() 转小写，存进变量 text。 */
+      var text = (t ? t.textContent : '').trim().toLowerCase();
+
+      /* indexOf 是"在字符串里找另一段文字"：
+       *   找到了 → 返回它在第几个位置（0、1、2……）
+       *   没找到 → 返回 -1
+       * 所以 text.indexOf(key) !== -1 就是"找到了"。
+       *
+       * 整个表达式的意思：
+       *   key 是空的 → 全部留下（hit = true）
+       *   key 非空、且 text 里包含 key → 留下
+       *   否则 → 藏起来
+       * === 是"严格等于"，!== 是"严格不等于"。 */
+      var hit = (key === '') || (text.indexOf(key) !== -1);
+
+      /* classList 是"元素身上挂的 class 列表"。
+       * toggle(类名, 布尔值)：
+       *   第二个参数是 true  → 加上这个类
+       *   第二个参数是 false → 去掉这个类
+       * !hit 是"把 hit 反过来"，所以：
+       *   hit=true（该留）→ !hit=false → 去掉 HIDDEN → 显示
+       *   hit=false（该藏）→ !hit=true → 加上 HIDDEN → 隐藏 */
+      a.classList.toggle(HIDDEN, !hit);
+    });
+  }
+
+
+  /* ============================================================
+   * 找到装语言的 <table>（叫它"菜单容器"）。
+   * ============================================================ */
+  function findMenuContainer(doc) {
+
+    /* querySelector 找第一个符合条件的元素。 */
+    var link = doc.querySelector(LINK_SEL);
+
+    /* 没找到就返回 null。
+     * null 是 JS 里表示"什么都没有"的特殊值。 */
+    if (!link) return null;
+
+    /* closest 是"从自己往上找最近的符合条件的祖先"。
+     * 从 <a> 往上找最近的那个 <table>。 */
+    return link.closest('table');
+  }
+
+
+  /* ============================================================
+   * 把搜索框插到菜单里，并接上"打字就过滤"的开关。
+   * ============================================================ */
+  function injectInput(doc, container) {
+
+    /* 已经有一个搜索框了？那就什么都不做，直接结束。 */
+    if (doc.getElementById(INPUT_ID)) return;
+
+    /* parentElement 是"父元素"，也就是外面包着它的那一层。
+     * 如果连父元素都没有，就用 doc.body 兜底。 */
+    var parent = container.parentElement || doc.body;
+
+    /* ---------- 造外层盒子 <div> ---------- */
+    var wrap = doc.createElement('div');   // 造一个新的 <div>
+    wrap.id = WRAP_ID;                     // 给它起 id
+
+    /* ---------- 造搜索框 <input> ---------- */
+    var input = doc.createElement('input');
+    input.id = INPUT_ID;
+    input.type = 'text';                    // 类型是"文本"
+    input.placeholder = '搜索语言…';        // 灰色的提示字
+    input.setAttribute('autocomplete', 'off'); // setAttribute 是"设置一个属性"
+    input.setAttribute('spellcheck', 'false');
+
+    /* appendChild：把 input 塞进 wrap 里。 */
+    wrap.appendChild(input);
+
+    /* insertBefore(新元素, 参照物)：把新元素放到参照物的前面。
+     * 这里就是把盒子放到 table 前面，也就是菜单顶部。 */
+    parent.insertBefore(wrap, container);
+
+    /* addEventListener 是"给元素装一个监听器"。
+     * 第一个参数是"事件名"，第二个参数是"事件发生时要做的事"。
+     * 'input' 事件：用户改了输入框内容（打字、删除、粘贴）时触发。 */
+    input.addEventListener('input', function () {
+      applyFilter(container, input.value);   // input.value 是输入框里的内容
+    });
+
+    /* 'keydown' 事件：用户按键时触发。
+     * 参数 e 是"事件对象"，e.key 是"按下的那个键的名字"。 */
+    input.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' || e.keyCode === 27) {
+        input.value = '';                // 清空输入框
+        applyFilter(container, '');      // 恢复全部显示
+      }
+    });
+
+    /* 万一输入框里已经有点内容（浏览器记忆），先过滤一次。 */
+    if (input.value) {
+      applyFilter(container, input.value);
+    }
+  }
+
+
+  /* ============================================================
+   * 处理一个文档：找菜单 → 注样式 → 插搜索框。
+   * ============================================================ */
+  function handleDoc(doc) {
+
+    /* 用 ! 表示"非"、"没有"。
+     * !doc 意思是"doc 不存在"，!doc.body 意思是"doc 没有 body"。 */
+    if (!doc || !doc.body) return;
+
+    var container = findMenuContainer(doc);
+    if (!container) return;
+
+    ensureStyle(doc);
+    injectInput(doc, container);
+  }
+
+
+  /* ============================================================
+   * 处理一个 iframe（网页里的小窗口）。
+   * ============================================================ */
+  function handleIframe(frame) {
+
+    var doc;
+
+    /* try...catch 是"试一试，出错就跳到 catch 里"。
+     * 因为跨域访问 contentDocument 会直接报错，
+     * 用 try 包住，就不会让整个脚本崩掉。 */
+    try {
+      /* contentDocument 是"这个小窗口里的文档"。 */
+      doc = frame.contentDocument;
+    } catch (err) {
+      return;   // 出错了，什么都不做，直接走人
+    }
+
+    if (!doc || !doc.body) return;
+    if (!doc.querySelector(LINK_SEL)) return;
+
+    handleDoc(doc);
+  }
+
+
+  /* ============================================================
+   * 全量扫描：主页面 + 所有 iframe。
+   * ============================================================ */
+  function scanAll() {
+
+    /* handleDoc(document)：处理主页面。
+     * document 是 JS 里代表"整个当前网页"的内置变量。 */
+    handleDoc(document);
+
+    /* querySelectorAll 找所有 iframe。 */
+    var frames = document.querySelectorAll('iframe');
+
+    Array.prototype.forEach.call(frames, function (frame) {
+
+      /* readyState 是"加载状态"。
+       * 'complete' 表示"加载完了"。 */
+      if (frame.contentDocument && frame.contentDocument.readyState === 'complete') {
+        handleIframe(frame);
+      } else {
+        /* addEventListener 的第三个参数 { once: true }
+         * 表示"这个监听器只执行一次，执行完自动扔掉"。 */
+        frame.addEventListener('load', function () {
+          handleIframe(frame);
+        }, { once: true });
+      }
+    });
+  }
+
+
+  /* ============================================================
+   * 启动！
+   * ============================================================ */
+
+  scanAll();   // 先立刻扫一次
+
+  /* MutationObserver 是 JS 内置的"页面变化观察者"。
+   * new MutationObserver(回调函数)：造一个观察者。
+   * observe(元素, 选项)：让它开始盯住某个元素。
+   * 选项里的 childList / subtree 意思是"盯住子节点的增删 + 所有后代"。 */
+  var observer = new MutationObserver(function () {
+    scanAll();
+  });
+  observer.observe(document.documentElement, {
+    childList: true,
+    subtree: true
+  });
+
+  /* 再监听一下 iframe 的加载完成。
+   * 第三个参数 true 表示"在捕获阶段监听"（load 事件不冒泡）。 */
+  document.addEventListener('load', function (e) {
+    if (e.target && e.target.tagName === 'IFRAME') {
+      handleIframe(e.target);
+    }
+  }, true);
+
+  /* setInterval(函数, 毫秒) 是"每隔一段时间就执行一次"。
+   * 这里每 1000 毫秒（也就是 1 秒）扫一次，兜底。 */
+  setInterval(scanAll, 1000);
+
+  /* window 是 JS 里的"全局窗口对象"。
+   * 挂上去的东西可以在浏览器控制台里访问，方便调试。 */
+  window.__gtLangFilter = {
+    scanAll: scanAll,
+    applyFilter: applyFilter,
+    version: '1.0.0'
+  };
+
+})();
+</script>
+  <script
+            type="text/javascript"
+            src="./files/js/translate.js></script>
+	
 </html>
